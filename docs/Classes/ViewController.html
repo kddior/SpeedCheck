@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/github_syntax_highlighting.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+  </head>
+  <body id="reference" class="Swift">
+    <a title="ViewController Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p class="header-text"><a href="../index.html"> Docs</a> (64% documented)</p>
+      </div>
+    </header>
+    <section id="valence">
+      <div class="content-wrapper">
+        <p id="hierarchial_navigation">
+        <a href="../index.html" id="design_resources_link"> Reference</a>
+        <img id="carat" src="../img/carat.png" height="10px" width="6px" />
+        ViewController Class Reference
+        </p>
+      </div>
+    </section>
+    <div class="content-wrapper">
+      <nav class="book-parts">
+        <ul class="nav-parts">
+          <li class="part-name tasks">
+          <a href="../Classes.html">Classes</a>
+            <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="../Classes/LocationHandler.html">LocationHandler</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="../Classes/WarningButton.html">WarningButton</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="../Classes/CompassButton.html">CompassButton</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="../Classes/ViewController.html">ViewController</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="../Classes/SpeedDisplayView.html">SpeedDisplayView</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="../Classes/MapViewSpeedButton.html">MapViewSpeedButton</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="../Classes/MapViewController.html">MapViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="part-name tasks">
+          <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="../Extensions/CAGradientLayer.html">CAGradientLayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="part-name tasks">
+          <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="../Protocols/LocationHandlerProtocol.html">LocationHandlerProtocol</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="../Protocols/SpeedDisplayViewProtocol.html">SpeedDisplayViewProtocol</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="pixel-line"></div>
+      <div class="rubber-band-gap"></div>
+      <article class="chapter">
+      <a name="/"></a>
+        <h1 class="chapter-name">ViewController</h1>
+        <section>
+          <section class="section">
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                
+                <a name="/Unnamed"></a>
+                
+              </div>
+              <ul class="task-group-list">
+                <li class="item symbol">
+                  <div class="task-group-term">
+                    <code>
+                    <a name="/s:FC8Speeding14ViewController15prepareForSegueFS0_FTCSo17UIStoryboardSegue6senderGSqPSs9AnyObject___T_">
+                    <a class="x-instance-method Swift" href="#/s:FC8Speeding14ViewController15prepareForSegueFS0_FTCSo17UIStoryboardSegue6senderGSqPSs9AnyObject___T_">prepareForSegue(_:sender:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointy-thing-container"></div>
+                    <section class="section instance-method">
+                      <div class="pointy-thing"></div>
+                      <div class="abstract">
+                        <ul><li>Called when the map button is pressed, opens the mapViewController to show the user&rsquo;s location and speed on the map. Assign the new viewController</li><li>as the delegate of the locationHandler so we can display information on that view as well.</li></ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <p class="para">
+                          <code>override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)</code>
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item symbol">
+                  <div class="task-group-term">
+                    <code>
+                    <a name="/s:FC8Speeding14ViewController24shareSpeedViaSocialMediaFS0_FT_T_">
+                    <a class="x-instance-method Swift" href="#/s:FC8Speeding14ViewController24shareSpeedViaSocialMediaFS0_FT_T_">shareSpeedViaSocialMedia()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointy-thing-container"></div>
+                    <section class="section instance-method">
+                      <div class="pointy-thing"></div>
+                      <div class="abstract">
+                        <ul><li>Shows an actionsheet to share user&rsquo;s location and speed via Facebook or twitter.</li></ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <p class="para">
+                          <code>@IBAction func shareSpeedViaSocialMedia()</code>
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item symbol">
+                  <div class="task-group-term">
+                    <code>
+                    <a name="/s:FC8Speeding14ViewController35presentErrorAlertViewForSocialMediaFS0_FT_T_">
+                    <a class="x-instance-method Swift" href="#/s:FC8Speeding14ViewController35presentErrorAlertViewForSocialMediaFS0_FT_T_">presentErrorAlertViewForSocialMedia()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointy-thing-container"></div>
+                    <section class="section instance-method">
+                      <div class="pointy-thing"></div>
+                      <div class="abstract">
+                        <ul><li>Presents an alertView if there was an error while trying to share via Facebook or twitter</li></ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <p class="para">
+                          <code>func presentErrorAlertViewForSocialMedia()</code>
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item symbol">
+                  <div class="task-group-term">
+                    <code>
+                    <a name="/s:FC8Speeding14ViewController11viewDidLoadFS0_FT_T_">
+                    <a class="x-instance-method Swift" href="#/s:FC8Speeding14ViewController11viewDidLoadFS0_FT_T_">viewDidLoad()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointy-thing-container"></div>
+                    <section class="section instance-method">
+                      <div class="pointy-thing"></div>
+                      <div class="abstract">
+                        <p class="para"><ul><li>Calls when the view is loaded into memory. We do custom setups for the view, setting up the gradient background, start location tracking, </li></ul>and customizing buttons and texts.</p>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <p class="para">
+                          <code>override func viewDidLoad()</code>
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item symbol">
+                  <div class="task-group-term">
+                    <code>
+                    <a name="/s:FC8Speeding14ViewController13viewDidAppearFS0_FSbT_">
+                    <a class="x-instance-method Swift" href="#/s:FC8Speeding14ViewController13viewDidAppearFS0_FSbT_">viewDidAppear(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointy-thing-container"></div>
+                    <section class="section instance-method">
+                      <div class="pointy-thing"></div>
+                      <div class="abstract">
+                        <ul><li>Reassigns locationHandler&rsquo;s protocol to this class, so the UI is updated when a new location is delivered.</li></ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <p class="para">
+                          <code>override func viewDidAppear(animated: Bool)</code>
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item symbol">
+                  <div class="task-group-term">
+                    <code>
+                    <a name="/s:FC8Speeding14ViewController21addGradientBackgroundFS0_FT_T_">
+                    <a class="x-instance-method Swift" href="#/s:FC8Speeding14ViewController21addGradientBackgroundFS0_FT_T_">addGradientBackground()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointy-thing-container"></div>
+                    <section class="section instance-method">
+                      <div class="pointy-thing"></div>
+                      <div class="abstract">
+                        <ul><li>Sets up a gradient layer as a background for the view.</li></ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <p class="para">
+                          <code>func addGradientBackground()</code>
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item symbol">
+                  <div class="task-group-term">
+                    <code>
+                    <a name="/s:FC8Speeding14ViewController36speedDisplayViewWarningButtonPressedFS0_FCS_13WarningButtonT_">
+                    <a class="x-instance-method Swift" href="#/s:FC8Speeding14ViewController36speedDisplayViewWarningButtonPressedFS0_FCS_13WarningButtonT_">speedDisplayViewWarningButtonPressed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointy-thing-container"></div>
+                    <section class="section instance-method">
+                      <div class="pointy-thing"></div>
+                      <div class="abstract">
+                        <ul><li>SpeedDisplayView protocol method. If a maximum speed is already set, remove it, if not, show an alertview and wait for the user&rsquo;s interaction to add the maximum speed. </li><li>@param warningButton - the button that was pressed</li></ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <p class="para">
+                          <code>func speedDisplayViewWarningButtonPressed(warningButton: WarningButton)</code>
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item symbol">
+                  <div class="task-group-term">
+                    <code>
+                    <a name="/s:FC8Speeding14ViewController31locationHandlerDidUpdateHeadingFS0_FCSo9CLHeadingT_">
+                    <a class="x-instance-method Swift" href="#/s:FC8Speeding14ViewController31locationHandlerDidUpdateHeadingFS0_FCSo9CLHeadingT_">locationHandlerDidUpdateHeading(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointy-thing-container"></div>
+                    <section class="section instance-method">
+                      <div class="pointy-thing"></div>
+                      <div class="abstract">
+                        <ul><li>Sets the new direction value to the compass</li><li>@param: newHeading - new heading value</li></ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <p class="para">
+                          <code>func locationHandlerDidUpdateHeading(newHeading: CLHeading)</code>
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item symbol">
+                  <div class="task-group-term">
+                    <code>
+                    <a name="/s:FC8Speeding14ViewController41locationHandlerDidUpdateLocationWithSpeedFS0_FTSd8locationCSo10CLLocation_T_">
+                    <a class="x-instance-method Swift" href="#/s:FC8Speeding14ViewController41locationHandlerDidUpdateLocationWithSpeedFS0_FTSd8locationCSo10CLLocation_T_">locationHandlerDidUpdateLocationWithSpeed(_:location:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointy-thing-container"></div>
+                    <section class="section instance-method">
+                      <div class="pointy-thing"></div>
+                      <div class="abstract">
+                        <ul><li>Displays the received speed value and checks if it is more than the maximum speed.</li><li>@param: speed - current speed</li><li>@param: location - current location</li></ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <p class="para">
+                          <code>func locationHandlerDidUpdateLocationWithSpeed(speed: Double, location: CLLocation)</code>
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item symbol">
+                  <div class="task-group-term">
+                    <code>
+                    <a name="/s:FC8Speeding14ViewController33checkCurrentSpeedOverMaximumSpeedFS0_FSdT_">
+                    <a class="x-instance-method Swift" href="#/s:FC8Speeding14ViewController33checkCurrentSpeedOverMaximumSpeedFS0_FSdT_">checkCurrentSpeedOverMaximumSpeed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointy-thing-container"></div>
+                    <section class="section instance-method">
+                      <div class="pointy-thing"></div>
+                      <div class="abstract">
+                        <ul><li>Checks if the current speed is bigger then the maximum speed (if set), if YES, a different background gradient is used.</li></ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <p class="para">
+                          <code>func checkCurrentSpeedOverMaximumSpeed(currentSpeed: Double)</code>
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item symbol">
+                  <div class="task-group-term">
+                    <code>
+                    <a name="/s:FC8Speeding14ViewController23preferredStatusBarStyleFS0_FT_OSC16UIStatusBarStyle">
+                    <a class="x-instance-method Swift" href="#/s:FC8Speeding14ViewController23preferredStatusBarStyleFS0_FT_OSC16UIStatusBarStyle">preferredStatusBarStyle()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointy-thing-container"></div>
+                    <section class="section instance-method">
+                      <div class="pointy-thing"></div>
+                      <div class="abstract">
+                        <ul><li>The preferred status bar style for the view controller. White in this case.</li></ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+            
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <p class="para">
+                          <code>override func preferredStatusBarStyle() -&gt; UIStatusBarStyle</code>
+                          </p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p class="copyright">&copy; 2015 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2015-02-17)</p>
+          <p class="copyright">Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.0.15</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

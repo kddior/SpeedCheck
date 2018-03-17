@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Speeding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfc-9w-egh" customClass="SpeedDisplayView" customModule="Speeding" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="148.5" width="250" height="250"/>
+                                <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="9eM-l1-w3Z"/>
+                                    <constraint firstAttribute="height" constant="250" id="CyP-mQ-p9K"/>
+                                    <constraint firstAttribute="width" constant="250" id="LL5-Xt-iw6"/>
+                                    <constraint firstAttribute="height" constant="250" id="lX6-T3-xFm"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9eM-l1-w3Z"/>
+                                        <exclude reference="lX6-T3-xFm"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbR-zd-zAx">
+                                <rect key="frame" x="162.5" y="597" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Yqx-sd-ps2"/>
+                                    <constraint firstAttribute="height" constant="50" id="Zn5-bp-dQz"/>
+                                </constraints>
+                                <state key="normal" image="mapButton">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xyH-Bc-L6K" kind="presentation" identifier="mapSegue" id="wmz-kS-fek"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4R1-FJ-PMT">
+                                <rect key="frame" x="56.5" y="597" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IpY-19-kS2"/>
+                                    <constraint firstAttribute="width" constant="50" id="Kzu-15-9cf"/>
+                                </constraints>
+                                <state key="normal" image="shareButton">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareSpeedViaSocialMedia" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ju6-hg-IIO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWp-St-lfW" customClass="CompassButton" customModule="Speeding" customModuleProvider="target">
+                                <rect key="frame" x="268.5" y="597" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dMj-HY-OwD"/>
+                                    <constraint firstAttribute="width" constant="50" id="sBx-hq-TG2"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max speed 217 km/h" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="znN-uT-XrW">
+                                <rect key="frame" x="62.5" y="483.5" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="9Kn-KO-nJ8"/>
+                                    <constraint firstAttribute="height" constant="30" id="bg2-rc-0mr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HWp-St-lfW" firstAttribute="leading" secondItem="QbR-zd-zAx" secondAttribute="trailing" constant="56" id="7f1-AV-zj1"/>
+                            <constraint firstAttribute="centerX" secondItem="pfc-9w-egh" secondAttribute="centerX" id="8lF-fh-M1o"/>
+                            <constraint firstAttribute="centerX" secondItem="QbR-zd-zAx" secondAttribute="centerX" id="Iko-ze-mnw"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="QbR-zd-zAx" secondAttribute="bottom" constant="20" id="YzR-po-zj4"/>
+                            <constraint firstAttribute="centerX" secondItem="znN-uT-XrW" secondAttribute="centerX" id="c4T-At-w0i"/>
+                            <constraint firstItem="QbR-zd-zAx" firstAttribute="leading" secondItem="4R1-FJ-PMT" secondAttribute="trailing" constant="56" id="cwZ-Lg-ZxO"/>
+                            <constraint firstItem="4R1-FJ-PMT" firstAttribute="bottom" secondItem="QbR-zd-zAx" secondAttribute="bottom" id="f2d-wJ-u99"/>
+                            <constraint firstItem="znN-uT-XrW" firstAttribute="top" secondItem="pfc-9w-egh" secondAttribute="bottom" constant="85" id="gso-Mf-urg"/>
+                            <constraint firstAttribute="centerY" secondItem="pfc-9w-egh" secondAttribute="centerY" constant="60" id="keE-Rb-1iC"/>
+                            <constraint firstItem="4R1-FJ-PMT" firstAttribute="bottom" secondItem="HWp-St-lfW" secondAttribute="bottom" id="yph-s0-Log"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="compassButton" destination="HWp-St-lfW" id="Acy-jy-J70"/>
+                        <outlet property="mapButton" destination="QbR-zd-zAx" id="5lM-a4-sfj"/>
+                        <outlet property="maxSpeedLabel" destination="znN-uT-XrW" id="phX-ai-5Gw"/>
+                        <outlet property="shareButton" destination="4R1-FJ-PMT" id="AyX-6H-ihd"/>
+                        <outlet property="speedDisplayView" destination="pfc-9w-egh" id="XJV-2m-g0x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-131" y="-130"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Gcr-dq-iOW">
+            <objects>
+                <viewController storyboardIdentifier="mapViewController" id="xyH-Bc-L6K" customClass="MapViewController" customModule="Speeding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sJC-ha-Q6M"/>
+                        <viewControllerLayoutGuide type="bottom" id="56l-a8-uRT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4yp-8P-Ou9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8nQ-Dr-v7N">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNy-TT-ep6" customClass="MapViewSpeedButton" customModule="Speeding" customModuleProvider="target">
+                                <rect key="frame" x="142.5" y="567" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="024-oI-H5E"/>
+                                    <constraint firstAttribute="height" constant="90" id="5a2-2P-u95"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissView" destination="xyH-Bc-L6K" eventType="touchUpInside" id="QP2-t1-ZNV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8nQ-Dr-v7N" secondAttribute="trailing" id="B0u-Wz-FZc"/>
+                            <constraint firstItem="56l-a8-uRT" firstAttribute="top" secondItem="aNy-TT-ep6" secondAttribute="bottom" constant="10" id="F0e-jP-FVE"/>
+                            <constraint firstItem="8nQ-Dr-v7N" firstAttribute="top" secondItem="4yp-8P-Ou9" secondAttribute="top" id="gY7-J4-JaZ"/>
+                            <constraint firstItem="56l-a8-uRT" firstAttribute="top" secondItem="8nQ-Dr-v7N" secondAttribute="bottom" id="sQt-tF-zZL"/>
+                            <constraint firstItem="8nQ-Dr-v7N" firstAttribute="leading" secondItem="4yp-8P-Ou9" secondAttribute="leading" id="vNK-ce-vfd"/>
+                            <constraint firstAttribute="centerX" secondItem="aNy-TT-ep6" secondAttribute="centerX" id="wC8-U7-ufu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dismissButton" destination="aNy-TT-ep6" id="1gU-T7-BwC"/>
+                        <outlet property="mapView" destination="8nQ-Dr-v7N" id="Hdb-nO-Eyz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qVC-dY-LDH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="531" y="-130"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mapButton" width="25" height="25"/>
+        <image name="shareButton" width="21" height="26"/>
+    </resources>
+</document>
