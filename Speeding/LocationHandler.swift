@@ -2,9 +2,8 @@
 //  LocationHandler.swift
 //  Speeding
 //
-//  Created by Serge Kone dossongui..
-//  Copyright (c) 2014 skdossongui.com. All rights reserved.
-//
+//  Created by Sztanyi Szabolcs on 03/10/14.
+//  Copyright (c) 2014 Zappdesigntemplates.com. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +13,7 @@ import CoreLocation
 * Custom protocol to share the location, speed and heading information with other classes that implements this protocol
 */
 
- protocol LocationHandlerProtocol {
+@objc protocol LocationHandlerProtocol {
     /**
     * Returns the speed and the current location objects
     * @param: speed - current speed of the user
@@ -25,7 +24,7 @@ import CoreLocation
     * Return the current heading direction of the user
     * @param: newHeading - the new heading data to set the compass' direction
     */
-      func locationHandlerDidUpdateHeading(newHeading: CLHeading)
+    @objc optional func locationHandlerDidUpdateHeading(newHeading: CLHeading)
 }
 
 /**
@@ -72,7 +71,7 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
     * @param: newHeading
     */
     func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        locationHandlerProtocol?.locationHandlerDidUpdateHeading(newHeading: newHeading)
+        locationHandlerProtocol?.locationHandlerDidUpdateHeading?(newHeading: newHeading)
     }
     
     /**
@@ -81,7 +80,7 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
     * @param: manager - The location manager object that generated the update event.
     * @param: locations - An array of CLLocation objects containing the location data
     */
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let firstLocation = locations.first
         {
             let speed = firstLocation.speed
@@ -97,7 +96,7 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
     * @param: manager - The location manager object coordinating the display of the heading calibration alert.
     * @return: Bool - Yes, if it should display the calibration
     */
-    func locationManagerShouldDisplayHeadingCalibration(manager: CLLocationManager) -> Bool {
+    func locationManagerShouldDisplayHeadingCalibration(_ manager: CLLocationManager) -> Bool {
         return true
     }
     

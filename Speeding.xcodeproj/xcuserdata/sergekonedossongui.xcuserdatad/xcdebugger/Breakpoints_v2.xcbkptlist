@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/ViewController.swift"
-            timestampString = "542984211.639733"
+            timestampString = "542987472.296321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "locationHandlerDidUpdateHeading(newHeading:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/ViewController.swift"
-            timestampString = "542984211.639832"
+            timestampString = "542987472.296911"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "locationHandlerDidUpdateLocationWithSpeed(speed:location:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/views/SpeedDisplayView.swift"
-            timestampString = "542984211.639914"
+            timestampString = "542987472.2973"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "SpeedDisplayViewProtocol"
             landmarkType = "5">
             <Locations>
@@ -106,7 +106,7 @@
                   moduleName = "Speeding"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sergekonedossongui/Downloads/Zappdesigntemplates%20SpeedTracker-Swift/Source%20code/Speeding/Speeding/views/SpeedDisplayView.swift"
-                  timestampString = "542984211.8071671"
+                  timestampString = "542987472.4499249"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -121,7 +121,7 @@
                   moduleName = "Speeding"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sergekonedossongui/Downloads/Zappdesigntemplates%20SpeedTracker-Swift/Source%20code/Speeding/Speeding/views/SpeedDisplayView.swift"
-                  timestampString = "542984211.811677"
+                  timestampString = "542987472.454568"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -136,11 +136,11 @@
                   moduleName = "Speeding"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sergekonedossongui/Downloads/Zappdesigntemplates%20SpeedTracker-Swift/Source%20code/Speeding/Speeding/views/SpeedDisplayView.swift"
-                  timestampString = "542984211.8156379"
+                  timestampString = "542987472.4587981"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
                   offsetFromSymbolStart = "28">
                </Location>
             </Locations>
@@ -153,11 +153,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/views/SpeedDisplayView.swift"
-            timestampString = "542984211.639987"
+            timestampString = "542987472.2973779"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "SpeedDisplayView"
             landmarkType = "3">
             <Locations>
@@ -169,11 +169,11 @@
                   moduleName = "Speeding"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sergekonedossongui/Downloads/Zappdesigntemplates%20SpeedTracker-Swift/Source%20code/Speeding/Speeding/views/SpeedDisplayView.swift"
-                  timestampString = "542984211.826045"
+                  timestampString = "542987472.472948"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
                   offsetFromSymbolStart = "190">
                </Location>
                <Location
@@ -184,11 +184,11 @@
                   moduleName = "Speeding"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sergekonedossongui/Downloads/Zappdesigntemplates%20SpeedTracker-Swift/Source%20code/Speeding/Speeding/views/SpeedDisplayView.swift"
-                  timestampString = "542984211.830194"
+                  timestampString = "542987472.477062"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
                   offsetFromSymbolStart = "505">
                </Location>
                <Location
@@ -199,11 +199,11 @@
                   moduleName = "Speeding"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sergekonedossongui/Downloads/Zappdesigntemplates%20SpeedTracker-Swift/Source%20code/Speeding/Speeding/views/SpeedDisplayView.swift"
-                  timestampString = "542984211.834344"
+                  timestampString = "542987472.481333"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
                   offsetFromSymbolStart = "80">
                </Location>
             </Locations>
@@ -216,11 +216,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/views/SpeedDisplayView.swift"
-            timestampString = "542984211.640057"
+            timestampString = "542987472.297452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>
@@ -232,13 +232,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/MapViewController.swift"
-            timestampString = "542984211.640131"
+            timestampString = "542987472.297526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "dismissView()"
-            landmarkType = "7">
+            startingLineNumber = "29"
+            endingLineNumber = "29">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -248,11 +246,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/MapViewController.swift"
-            timestampString = "542984211.640205"
+            timestampString = "542987472.2976381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "MapViewController"
             landmarkType = "3">
             <Locations>
@@ -264,12 +262,12 @@
                   moduleName = "Speeding"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sergekonedossongui/Downloads/Zappdesigntemplates%20SpeedTracker-Swift/Source%20code/Speeding/Speeding/MapViewController.swift"
-                  timestampString = "542984211.8634681"
+                  timestampString = "542987472.506075"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "190">
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "102">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -279,12 +277,12 @@
                   moduleName = "Speeding"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sergekonedossongui/Downloads/Zappdesigntemplates%20SpeedTracker-Swift/Source%20code/Speeding/Speeding/MapViewController.swift"
-                  timestampString = "542984211.868045"
+                  timestampString = "542987472.5103559"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "505">
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "110">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -294,12 +292,12 @@
                   moduleName = "Speeding"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sergekonedossongui/Downloads/Zappdesigntemplates%20SpeedTracker-Swift/Source%20code/Speeding/Speeding/MapViewController.swift"
-                  timestampString = "542984211.873837"
+                  timestampString = "542987472.514228"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "387">
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "343">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -309,12 +307,12 @@
                   moduleName = "Speeding"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sergekonedossongui/Downloads/Zappdesigntemplates%20SpeedTracker-Swift/Source%20code/Speeding/Speeding/MapViewController.swift"
-                  timestampString = "542984211.8786989"
+                  timestampString = "542987472.518316"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "291">
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "256">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -326,11 +324,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/views/SpeedDisplayView.swift"
-            timestampString = "542984211.640277"
+            timestampString = "542987472.297757"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "warningButtonPressed()"
             landmarkType = "7">
          </BreakpointContent>
@@ -342,11 +340,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/ViewController.swift"
-            timestampString = "542984211.640344"
+            timestampString = "542987472.297835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -358,11 +356,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/views/SpeedDisplayView.swift"
-            timestampString = "542984211.640416"
+            timestampString = "542987472.298231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "showMaxSpeedMarkerAt(maxSpeed:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -374,11 +372,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/views/SpeedDisplayView.swift"
-            timestampString = "542984211.6404819"
+            timestampString = "542987472.298303"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "hideMaxSpeedMarker()"
             landmarkType = "7">
          </BreakpointContent>
@@ -390,11 +388,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/ViewController.swift"
-            timestampString = "542984211.640548"
+            timestampString = "542987472.298373"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "speedDisplayViewWarningButtonPressed(warningButton:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -406,11 +404,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/ViewController.swift"
-            timestampString = "542984211.640619"
+            timestampString = "542987472.298741"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "speedDisplayViewWarningButtonPressed(warningButton:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -485,22 +483,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Speeding/ViewController.swift"
-            timestampString = "542984211.6415"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Speeding/custom objects/LocationHandler.swift"
             timestampString = "542982563.512579"
             startingColumnNumber = "9223372036854775807"
@@ -518,7 +500,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/LocationHandler.swift"
-            timestampString = "542984341.280486"
+            timestampString = "542987472.2995811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
@@ -534,7 +516,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/LocationHandler.swift"
-            timestampString = "542984349.5143681"
+            timestampString = "542987472.299659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
@@ -550,7 +532,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/LocationHandler.swift"
-            timestampString = "542984352.112094"
+            timestampString = "542987472.299729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
@@ -566,7 +548,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/LocationHandler.swift"
-            timestampString = "542984356.510488"
+            timestampString = "542987472.2998"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
@@ -582,12 +564,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Speeding/LocationHandler.swift"
-            timestampString = "542984369.013821"
+            timestampString = "542987472.299871"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
             endingLineNumber = "84"
-            landmarkName = "locationManager(manager:didUpdateLocations:)"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Speeding/ViewController.swift"
+            timestampString = "542987472.2999409"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "checkCurrentSpeedOverMaximumSpeed(currentSpeed:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

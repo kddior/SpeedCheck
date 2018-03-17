@@ -2,9 +2,8 @@
 //  MapViewController.swift
 //  Speeding
 //
-//  Created by Serge Kone dossongui..
-//  Copyright (c) 2014 skdossongui.com. All rights reserved.
-//
+//  Created by Sztanyi Szabolcs on 03/10/14.
+//  Copyright (c) 2014 Zappdesigntemplates.com. All rights reserved.
 //
 
 import UIKit
@@ -15,11 +14,6 @@ import MapKit
 */
 
 class MapViewController: UIViewController, LocationHandlerProtocol {
-    func locationHandlerDidUpdateHeading(newHeading: CLHeading) {
-        print("test")
-    }
-    
-    
 
     /// mapView to show the user's location
     @IBOutlet var mapView: MKMapView!
@@ -47,9 +41,5 @@ class MapViewController: UIViewController, LocationHandlerProtocol {
         let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 1000, 1000)
         mapView.setRegion(region, animated: true)
     }
-    
-    
-   
-
     
 }

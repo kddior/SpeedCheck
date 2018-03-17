@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Speeding
 //
-//  Created by Serge Kone dossongui..
-//  Copyright (c) 2014 skdossongui.com. All rights reserved.
+//  Created by Szabolcs Sztányi on 2014.10.02..
+//  Copyright (c) 2014 Zappdesigntemplates.com. All rights reserved.
 //
 
 import UIKit
@@ -98,12 +98,10 @@ class ViewController: UIViewController, LocationHandlerProtocol, SpeedDisplayVie
     */
     override func viewDidLoad() {
         addGradientBackground()
+        
+        maximumSpeed = 240.0
         locationHandler.startLocationTracking()
-     
         speedDisplayView.speedDisplayViewProtocol = self
-        
-       
-        
         
         mapButton.layer.borderWidth = 1.0
         mapButton.layer.borderColor = UIColor.white.cgColor
@@ -123,8 +121,6 @@ class ViewController: UIViewController, LocationHandlerProtocol, SpeedDisplayVie
     */
     override func viewDidAppear(_ animated: Bool) {
         locationHandler.locationHandlerProtocol = self
-        print(locationHandler.currentUserLocation?.altitude)
-        locationHandler.startLocationTracking()
         super.viewDidAppear(animated)
     }
 
