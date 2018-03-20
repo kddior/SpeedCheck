@@ -43,7 +43,7 @@ class SpeedDisplayView: UIView {
     private var speedLabel: UILabel
     // label to show the speed format (km/h)
     private var speedFormatlabel: UILabel
-
+    private var speedconverter :Double = 1.0
     /**
     * Initializes the objects
     * @param: coder - NSCoder
@@ -64,11 +64,10 @@ class SpeedDisplayView: UIView {
     */
     override func awakeFromNib() {
         backgroundColor = .clear
-
-        let startAngle = CGFloat(M_PI_2) + 0.31
-        let endAngle = CGFloat(M_PI * 2 + M_PI_2) - 0.34
+        let startAngle = Double.pi/2 + 0.31
+        let endAngle = (Double.pi * 2 + Double.pi/2) - 0.34
         let centerPoint = CGPoint.init(x: frame.width/2, y: frame.height/2)
-        progressLayer.path = UIBezierPath(arcCenter:centerPoint, radius: frame.width/2, startAngle:startAngle, endAngle:endAngle, clockwise: true).cgPath
+        progressLayer.path = UIBezierPath(arcCenter:centerPoint, radius: frame.width/2, startAngle:CGFloat(startAngle), endAngle:CGFloat(endAngle), clockwise: true).cgPath
         progressLayer.backgroundColor = UIColor.clear.cgColor
         progressLayer.fillColor = nil
         progressLayer.strokeColor = UIColor.white.cgColor
@@ -86,15 +85,21 @@ class SpeedDisplayView: UIView {
         dashedLayer.path = progressLayer.path
         layer.insertSublayer(dashedLayer, below: progressLayer)
 
-        maxSpeedMarkerLayer.path = UIBezierPath(arcCenter:centerPoint, radius: frame.width/2 - 10.0 , startAngle:startAngle, endAngle:endAngle, clockwise: true).cgPath
+        maxSpeedMarkerLayer.path = UIBezierPath(arcCenter:centerPoint, radius: frame.width/2 - 10.0 , startAngle:CGFloat(startAngle), endAngle:CGFloat(endAngle), clockwise: true).cgPath
         maxSpeedMarkerLayer.strokeColor = UIColor(white: 1.0, alpha: 0.8).cgColor
         maxSpeedMarkerLayer.fillColor = nil
         maxSpeedMarkerLayer.lineWidth = 2.0
         maxSpeedMarkerLayer.strokeEnd = progressLayer.strokeEnd
         
+        
+        
         addSpeedLabelToView()
         addSpeedFormatLabelToView()
-        addWarningButton()        
+        addWarningButton()
+        
+      
+        
+        
         super.awakeFromNib()
     }
     
@@ -128,8 +133,10 @@ class SpeedDisplayView: UIView {
     * @param: speed - current speed
     */
     func setCurrentSpeed(speed: Double) {
-        speedLabel.text = String(format: "%.0f", arguments: [speed])
-        progressLayer.strokeEnd = CGFloat(speed/clockLimitSpeed)
+        
+        let curSpeed =  speedconverter * speed
+        speedLabel.text = String(format: "%.0f", arguments: [curSpeed])
+        progressLayer.strokeEnd = CGFloat(curSpeed/clockLimitSpeed)
     }
     
     /**
@@ -143,12 +150,15 @@ class SpeedDisplayView: UIView {
     * Creates and adds the warning button to the view
     */
     private func addWarningButton() {
-        warningButton.setTitle("!", for: .normal)
+        
+        warningButton.setTitle("MAX", for: .normal)
         warningButton.backgroundColor = .clear
         warningButton.setTitleColor(UIColor.white, for: .normal)
         warningButton.translatesAutoresizingMaskIntoConstraints = false
         warningButton.addTarget(self, action: "warningButtonPressed", for: .touchUpInside)
         addSubview(warningButton)
+        
+        //  let customTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.didTapUserCustomButton(_:)))
         
         addConstraint(NSLayoutConstraint(item: self, attribute: .centerX, relatedBy: .equal, toItem: warningButton, attribute: .centerX, multiplier: 1.0, constant: 0.0))
         addConstraint(NSLayoutConstraint(item: self, attribute: .bottomMargin, relatedBy: .equal, toItem: warningButton, attribute: .bottomMargin, multiplier: 1.0, constant: -40.0))
@@ -179,14 +189,36 @@ class SpeedDisplayView: UIView {
     private func addSpeedFormatLabelToView() {
        
         speedFormatlabel =  UILabel(frame: CGRect(x: 0.0, y: speedLabel.frame.maxY + 0.5 , width: frame.width, height: 30.0))
+        //speedFormatlabel.layer.borderWidth = 0.5
         speedFormatlabel.textColor = UIColor(white: 1.0, alpha: 0.5)
         speedFormatlabel.textAlignment = .center
         speedFormatlabel.text = "km/h"
         speedFormatlabel.font = UIFont(name: "HelveticaNeue-Light", size: 20.0)
         speedFormatlabel.translatesAutoresizingMaskIntoConstraints = false
+       
+        //add gesture to label
+        let speedFormatlabelTapGesture = UITapGestureRecognizer(target: self, action:#selector(self.didTapUserCustomButton(_:)))
+        speedFormatlabel.addGestureRecognizer(speedFormatlabelTapGesture)
+        speedFormatlabel.isUserInteractionEnabled = true
+      
         addSubview(speedFormatlabel)
+        
         
         addConstraint(NSLayoutConstraint(item: speedLabel, attribute: .bottomMargin, relatedBy: .equal, toItem: speedFormatlabel, attribute: .topMargin, multiplier: 1.0, constant: -10.0))
         addConstraint(NSLayoutConstraint(item: speedLabel, attribute: .centerX, relatedBy: .equal, toItem: speedFormatlabel, attribute: .centerX, multiplier: 1.0, constant: 0.0))
+    }
+    
+    
+    func didTapUserCustomButton(_ sender: UITapGestureRecognizer) {
+ 
+        if(speedFormatlabel.text == "km/h"){
+            speedFormatlabel.text = "mile/h"
+            speedconverter = 0.621371
+           
+        } else {
+            speedFormatlabel.text = "km/h"
+            speedconverter = 1.0
+        }
+        
     }
 }

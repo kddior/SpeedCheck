@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Speeding
 //
-//  Created by Szabolcs Sztányi on 2014.10.02..
-//  Copyright (c) 2014 Zappdesigntemplates.com. All rights reserved.
+//  Created by Serge Kone dossongui..
+//  Copyright (c) 2014 skdossongui.com. All rights reserved.
 //
 
 import UIKit
@@ -17,6 +17,8 @@ import Social
 */
 
 class ViewController: UIViewController, LocationHandlerProtocol, SpeedDisplayViewProtocol {
+    
+// mapView to show the user's location
 
     // gradient background layer
     var gradientLayer = CAGradientLayer()
@@ -24,6 +26,7 @@ class ViewController: UIViewController, LocationHandlerProtocol, SpeedDisplayVie
     let locationHandler = LocationHandler()
     // maximum speed set by the user
     var maximumSpeed: Double?
+    
     
     // button to open mapView
     @IBOutlet var mapButton: UIButton!
@@ -41,11 +44,28 @@ class ViewController: UIViewController, LocationHandlerProtocol, SpeedDisplayVie
     * as the delegate of the locationHandler so we can display information on that view as well.
     */
      func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+ 
         if segue.identifier == "mapSegue"
         {
             let mapViewController = segue.destination as! MapViewController
-            locationHandler.locationHandlerProtocol = mapViewController
+     
+          //  mapViewController.s = (locationHandler.currentUserLocation?.speed)!
+            
+            //locationHandler.locationHandlerProtocol = mapViewController
+            
+      //      mapViewController.dismissButton.setCurrentSpeed(speed: (locationHandler.currentUserLocation?.speed)!)
+        // locationHandler.currentUserLocation?.speed
+        
         }
+    }
+    
+    
+    
+    
+    @IBAction func SwitchToMapView(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "mapSegue", sender: self)
+        
     }
     
     /**
@@ -138,19 +158,20 @@ class ViewController: UIViewController, LocationHandlerProtocol, SpeedDisplayVie
     * @param warningButton - the button that was pressed
     */
     func speedDisplayViewWarningButtonPressed(warningButton: WarningButton) {
-        if maximumSpeed != nil
-        {
-            maximumSpeed = nil
-            warningButton.setTitle("!", for: .normal)
-            speedDisplayView.hideMaxSpeedMarker()
-            maxSpeedLabel.text = ""
-        }
-        else
-        {
+    //    if maximumSpeed != nil
+     //   {
+      //      maximumSpeed = nil
+     //       warningButton.setTitle("!", for: .normal)
+     //       speedDisplayView.hideMaxSpeedMarker()
+     //       maxSpeedLabel.text = ""
+     //   }
+       // else
+       // {
             let alertView = UIAlertController(title: "Set maximum speed", message: "Set up a maximum speed to be alerted when your current speed passes it.", preferredStyle: .alert)
             alertView.addTextField { (textField: UITextField!) -> Void in
                 textField.placeholder = "Max speed limit"
                 textField.keyboardType = .numberPad
+                textField.becomeFirstResponder()
             }
             alertView.addAction(UIAlertAction(title: "Set", style: .default, handler: { (alertAction) -> Void in
                 if let textField = alertView.textFields?.first
@@ -162,13 +183,16 @@ class ViewController: UIViewController, LocationHandlerProtocol, SpeedDisplayVie
                             self.speedDisplayView.showMaxSpeedMarkerAt(maxSpeed: maxSpeed)
                             self.maximumSpeed = maxSpeed
                             self.maxSpeedLabel.text = String(format: "Max speed %.0f km/h", maxSpeed)
+                            
+                            let alertController = UIAlertController(title: "Slow down", message: "slow down", preferredStyle: UIAlertControllerStyle.alert)
+                            self.present(alertController, animated: true, completion: nil)
                         }
                     }
                 }
             }))
             alertView.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             present(alertView, animated: true, completion: nil)
-        }
+      //  }
     }
     
     /**
@@ -193,6 +217,8 @@ class ViewController: UIViewController, LocationHandlerProtocol, SpeedDisplayVie
         }
     }
     
+
+
     /**
     * Checks if the current speed is bigger then the maximum speed (if set), if YES, a different background gradient is used.
     */
@@ -204,8 +230,10 @@ class ViewController: UIViewController, LocationHandlerProtocol, SpeedDisplayVie
         else
         {
             gradientLayer.colors = CAGradientLayer.gradientColors(warning: false)
+           
         }
     }
+    
     
     /**
     * The preferred status bar style for the view controller. White in this case.

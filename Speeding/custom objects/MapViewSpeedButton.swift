@@ -9,9 +9,10 @@
 
 import UIKit
 
-/**
-* Custom UIButton to show the current speed of the user
-*/
+
+
+
+
 
 class MapViewSpeedButton: UIButton {
 
@@ -25,6 +26,8 @@ class MapViewSpeedButton: UIButton {
     var speedLabel: UILabel = UILabel()
     // shows the speed format e.g.: km/h
     var speedFormatLabel: UILabel = UILabel()
+    
+    private var speedconverter :Double = 1.0
 
     /**
     * Initializer method.
@@ -36,6 +39,7 @@ class MapViewSpeedButton: UIButton {
         setupLayers()
         setupLabels()
         backgroundColor = .white
+        //setCurrentSpeed()
     }
 
     /**
@@ -51,16 +55,18 @@ class MapViewSpeedButton: UIButton {
     * @param: speed - current speed
     */
     func setCurrentSpeed(speed: Double) {
-        speedLabel.text = String(format: "%.0f", arguments: [speed])
-        progressLayer.strokeEnd = CGFloat(speed/clockLimitSpeed)
+        
+        let curSpeed =  speedconverter * speed
+        speedLabel.text = String(format: "%.0f", arguments: [curSpeed])
+        progressLayer.strokeEnd = CGFloat(curSpeed/clockLimitSpeed)
     }
     
     /**
     * Sets up both layers to show the current speed and the dashed line circle layer.
     */
     func setupLayers() {
-        let startAngle = CGFloat(M_PI_2)
-        let endAngle = CGFloat(M_PI * 2 + M_PI_2)
+        let startAngle = CGFloat(Double.pi/2)
+        let endAngle = CGFloat(Double.pi * 2 + Double.pi/2)
         
         
         let centerPoint = CGPoint(x: bounds.width/2, y: bounds.height/2 )
@@ -98,8 +104,9 @@ class MapViewSpeedButton: UIButton {
         speedLabel = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: bounds.width/2 , height: 60.0))
         speedLabel.textColor = .black
         speedLabel.textAlignment = .center
+      //  print(speed)
         speedLabel.text = "0"
-        speedLabel.font = UIFont(name: "HelveticaNeue-Light", size: 24.0)
+        speedLabel.font = UIFont(name: "HelveticaNeue-Light", size: 40.0)
         speedLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(speedLabel)
         
@@ -113,11 +120,29 @@ class MapViewSpeedButton: UIButton {
         speedFormatLabel.textColor = .black
         speedFormatLabel.textAlignment = .center
         speedFormatLabel.text = "km/h"
-        speedFormatLabel.font = UIFont(name: "HelveticaNeue", size: 10.0)
+        speedFormatLabel.font = UIFont(name: "HelveticaNeue", size: 15.0)
         speedFormatLabel.translatesAutoresizingMaskIntoConstraints = false
+        //add gesture to label
+        let speedFormatlabelTapGesture = UITapGestureRecognizer(target: self, action:#selector(self.didTapUserCustomButton(_:)))
+        speedFormatLabel.addGestureRecognizer(speedFormatlabelTapGesture)
+        speedFormatLabel.isUserInteractionEnabled = true
+        
         addSubview(speedFormatLabel)
         
         addConstraint(NSLayoutConstraint(item: speedLabel, attribute: .bottomMargin, relatedBy: .equal, toItem: speedFormatLabel, attribute: .topMargin, multiplier: 1.0, constant: -15.0))
         addConstraint(NSLayoutConstraint(item: speedLabel, attribute: .centerX, relatedBy: .equal, toItem: speedFormatLabel, attribute: .centerX, multiplier: 1.0, constant: 0.0))
+    }
+    
+    func didTapUserCustomButton(_ sender: UITapGestureRecognizer) {
+        
+        if(speedFormatLabel.text == "km/h"){
+            speedFormatLabel.text = "mile/h"
+            speedconverter = 0.621371
+            
+        } else {
+            speedFormatLabel.text = "km/h"
+            speedconverter = 1.0
+        }
+        
     }
 }

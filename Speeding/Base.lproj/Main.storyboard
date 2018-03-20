@@ -53,6 +53,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="SwitchToMapView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Yp6-tb-9KM"/>
                                     <segue destination="xyH-Bc-L6K" kind="presentation" identifier="mapSegue" id="wmz-kS-fek"/>
                                 </connections>
                             </button>
@@ -132,10 +133,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNy-TT-ep6" customClass="MapViewSpeedButton" customModule="Speeding" customModuleProvider="target">
-                                <rect key="frame" x="142.5" y="567" width="90" height="90"/>
+                                <rect key="frame" x="113" y="539" width="120" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="024-oI-H5E"/>
-                                    <constraint firstAttribute="height" constant="90" id="5a2-2P-u95"/>
+                                    <constraint firstAttribute="width" constant="120" id="024-oI-H5E"/>
+                                    <constraint firstAttribute="height" constant="120" id="5a2-2P-u95"/>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -148,11 +149,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="8nQ-Dr-v7N" secondAttribute="trailing" id="B0u-Wz-FZc"/>
-                            <constraint firstItem="56l-a8-uRT" firstAttribute="top" secondItem="aNy-TT-ep6" secondAttribute="bottom" constant="10" id="F0e-jP-FVE"/>
+                            <constraint firstItem="56l-a8-uRT" firstAttribute="top" secondItem="aNy-TT-ep6" secondAttribute="bottom" constant="8" id="F0e-jP-FVE"/>
                             <constraint firstItem="8nQ-Dr-v7N" firstAttribute="top" secondItem="4yp-8P-Ou9" secondAttribute="top" id="gY7-J4-JaZ"/>
                             <constraint firstItem="56l-a8-uRT" firstAttribute="top" secondItem="8nQ-Dr-v7N" secondAttribute="bottom" id="sQt-tF-zZL"/>
                             <constraint firstItem="8nQ-Dr-v7N" firstAttribute="leading" secondItem="4yp-8P-Ou9" secondAttribute="leading" id="vNK-ce-vfd"/>
-                            <constraint firstAttribute="centerX" secondItem="aNy-TT-ep6" secondAttribute="centerX" id="wC8-U7-ufu"/>
+                            <constraint firstAttribute="centerX" secondItem="aNy-TT-ep6" secondAttribute="centerX" constant="14.5" id="wC8-U7-ufu"/>
                         </constraints>
                     </view>
                     <connections>
@@ -162,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVC-dY-LDH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="531" y="-130"/>
+            <point key="canvasLocation" x="530.39999999999998" y="-130.88455772113943"/>
         </scene>
     </scenes>
     <resources>

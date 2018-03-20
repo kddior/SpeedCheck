@@ -2,12 +2,13 @@
 //  LocationHandler.swift
 //  Speeding
 //
-//  Created by Sztanyi Szabolcs on 03/10/14.
-//  Copyright (c) 2014 Zappdesigntemplates.com. All rights reserved.
+//  Created by Serge Kone dossongui..
+//  Copyright (c) 2014 skdossongui.com. All rights reserved.
 //
 
 import UIKit
 import CoreLocation
+import MapKit
 
 /**
 * Custom protocol to share the location, speed and heading information with other classes that implements this protocol
@@ -25,13 +26,15 @@ import CoreLocation
     * @param: newHeading - the new heading data to set the compass' direction
     */
     @objc optional func locationHandlerDidUpdateHeading(newHeading: CLHeading)
+    
+
 }
 
 /**
 * Custom object to handle location and heading events.
 */
 
-class LocationHandler: NSObject, CLLocationManagerDelegate {
+class LocationHandler: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
 
     var locationHandlerProtocol: LocationHandlerProtocol?
     var locationManager: CLLocationManager!
@@ -56,6 +59,7 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
         locationManager.headingFilter = kCLHeadingFilterNone
     }
     
+  
     /**
     * Starts the location tracking
     */
@@ -86,6 +90,7 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
             let speed = firstLocation.speed
             if speed > 0 {
                 locationHandlerProtocol?.locationHandlerDidUpdateLocationWithSpeed(speed: speed * 3.6, location: firstLocation)
+
             }
         }
         currentUserLocation = locations.first

@@ -33,7 +33,7 @@ class CompassButton: UIButton {
     * @param: newDirection - the new direction object
     */
     func setCompassDirection(newDirection: CLLocationDirection) {
-        arrowIcon.transform = CGAffineTransform(rotationAngle: CGFloat(newDirection * M_PI / 180))
+        arrowIcon.transform = CGAffineTransform(rotationAngle: CGFloat(newDirection * Double.pi / 180))
     }
     
     /**

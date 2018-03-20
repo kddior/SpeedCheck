@@ -2,31 +2,48 @@
 //  MapViewController.swift
 //  Speeding
 //
-//  Created by Sztanyi Szabolcs on 03/10/14.
-//  Copyright (c) 2014 Zappdesigntemplates.com. All rights reserved.
+//  Created by Serge Kone dossongui..
+//  Copyright (c) 2014 skdossongui.com. All rights reserved.
 //
 
 import UIKit
 import MapKit
+import CoreLocation
 
 /**
 * Custom UIViewController to show the user's location on the map and their current speed.
 */
 
-class MapViewController: UIViewController, LocationHandlerProtocol {
-
+class MapViewController: UIViewController, LocationHandlerProtocol{
+   
+    
     /// mapView to show the user's location
     @IBOutlet var mapView: MKMapView!
     // custom button that shows the user's speed and
     @IBOutlet var dismissButton: MapViewSpeedButton!
-    // location handler's protocol to get updates of location events
-    var locationHandlerProtocol: LocationHandlerProtocol?
+    let locationHandler = LocationHandler()
+   
+ 
     
+
     /**
     * Dismisses the view.
     */
     @IBAction func dismissView() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewDidLoad() {
+      
+   locationHandler.startLocationTracking()
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+         locationHandler.locationHandlerProtocol = self
+    
+        super.viewDidAppear(animated)
+   
     }
     
     /**
@@ -41,5 +58,8 @@ class MapViewController: UIViewController, LocationHandlerProtocol {
         let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 1000, 1000)
         mapView.setRegion(region, animated: true)
     }
+    
+    
+    
     
 }
