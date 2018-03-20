@@ -18,8 +18,6 @@ List of  **Basic   Stories**  completed:
 ## Video Walkthrough Part I  
 
 Here's a walkthrough of implemented Login Improved stories:
-<img src='https://github.com/kddior/InstagramClone/blob/master/DemoITest.gif' title='Part1' width='' alt='Video Walkthrough' />
-
 <img src='https://github.com/kddior/SpeedCheck/blob/master/Speedydemo.gif' title='Part1' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
