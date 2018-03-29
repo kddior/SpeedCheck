@@ -185,7 +185,7 @@ class ViewController: UIViewController, LocationHandlerProtocol, SpeedDisplayVie
                             self.maxSpeedLabel.text = String(format: "Max speed %.0f km/h", maxSpeed)
                             
                             let alertController = UIAlertController(title: "Slow down", message: "slow down", preferredStyle: UIAlertControllerStyle.alert)
-                            self.present(alertController, animated: true, completion: nil)
+                         //   self.present(alertController, animated: true, completion: isBeingDismissed)
                         }
                     }
                 }
